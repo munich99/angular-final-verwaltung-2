@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
     isSubmitted = false;
 
   ngOnInit() {
-    // Livecycle Event beim Start
+    // Livecycle Event beim Start ## für Daten zum Anmelden
     this.loginForm = this.formBuilder.group({
       email: ['', Validators.required],
       password: ['', Validators.required]
@@ -32,6 +32,17 @@ export class LoginComponent implements OnInit {
 
   get formControls(){
     return this.loginForm.controls;
+  }
+
+  login(){
+    console.log(this.loginForm.value);
+    this.isSubmitted = true;
+    if(this.formControls.invalid){
+      return;
+    }
+    this.authService.login(this.loginForm.value);  
+    this.router.navigateByUrl('../admin/admin');
+
   }
 
 }
