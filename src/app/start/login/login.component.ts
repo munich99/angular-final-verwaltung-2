@@ -18,6 +18,9 @@ export class LoginComponent implements OnInit {
     private router:Router,
     private formBuilder:FormBuilder ) { }
 
+    loginForm:FormGroup;
+    isSubmitted = false;
+
   ngOnInit() {
   }
 
