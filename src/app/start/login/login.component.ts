@@ -18,10 +18,16 @@ export class LoginComponent implements OnInit {
     private router:Router,
     private formBuilder:FormBuilder ) { }
 
+    // Variablen Deklaratin für reactives Formular
     loginForm:FormGroup;
     isSubmitted = false;
 
   ngOnInit() {
+    // Livecycle Event beim Start
+    this.loginForm = this.formBuilder.group({
+      email: ['', Validators.required],
+      password: ['', Validators.required]
+    });
   }
 
 }
