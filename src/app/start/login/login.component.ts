@@ -30,4 +30,8 @@ export class LoginComponent implements OnInit {
     });
   }
 
+  get formControls(){
+    return this.loginForm.controls;
+  }
+
 }
