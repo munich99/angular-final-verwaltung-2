@@ -40,7 +40,9 @@ export class LoginComponent implements OnInit {
     if(this.formControls.invalid){
       return;
     }
+    // geht zu AuthService Componente, dann zu Methode logIn()
     this.authService.login(this.loginForm.value);  
+    // wechselt zu admin Seite ## nach dem einloggen
     this.router.navigateByUrl('../admin/admin');
 
   }
