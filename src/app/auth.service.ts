@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { User} from '../start/interfaces/user'
+import { User} from './start/interfaces/user'
 
 @Injectable({
   providedIn:'root'
@@ -10,7 +10,7 @@ export class AuthService {
 
   // deklariert Token zum Anmenden -- art der Variablen
   // setzt #Tokenkey und Tokenvalue#  über localStorage
-  public logIn(userInfo:User){
+  public login(userInfo:User){
     localStorage.setItem('ACCESS_TOKEN', "access_token")
   }
 

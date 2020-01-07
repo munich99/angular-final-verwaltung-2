@@ -41,7 +41,7 @@ export class LoginComponent implements OnInit {
       return;
     }
     // geht zu AuthService Componente, dann zu Methode logIn()
-    this.authService.logIn(this.loginForm.value);  
+    this.authService.login(this.loginForm.value);  
     // wechselt zu admin Seite ## nach dem einloggen
     this.router.navigateByUrl('admin');
 
